@@ -11,7 +11,7 @@ Username dicoding: naufal_azmi_ginting
 | Metode pengolahan | Data diolah menggunakan komponen TFX seperti ExampleGen, StatisticsGen, SchemaGen, dan Transform. Fitur numerik akan dinormalisasi ke skala 0 dan 1, sementara fitur kategorikal diubah menjadi representasi one-hot. |
 | Arsitektur model | Model dibangun menggunakan API Keras Functional. Input berupa gabungan dari fitur numerik dan one-hot encoded fitur kategorikal. Layer tersembunyi terdiri dari Dense 256 → 64 → 16 dengan aktivasi ReLU, dan output layer menggunakan sigmoid. Model dikompilasi dengan optimizer Adam dan loss binary_crossentropy. |
 | Metrik evaluasi | - AUC<br>- ExampleCount<br>- Binary Accuracy<br>- False Positive<br>- False Negative<br>- True Positive<br>- True Negative<br>- Loss |
-| Performa model | - **AUC** : 0.93<br>- **ExampleCount** : 391<br>- **Binary Accuracy** : 0.885<br>- **False Positive** : 21<br>- **False Negative** : 24<br>- **True Positive** : 173<br>- **True Negative** : 173<br>- **Loss** : 1.176  |
+| Performa model | - **AUC** : 0.943<br>- **ExampleCount** : 391<br>- **Binary Accuracy** : 0.887<br>- **False Positive** : 20<br>- **False Negative** : 24<br>- **True Positive** : 173<br>- **True Negative** : 174<br>- **Loss** : 0.937  |
 | Opsi deployment | Model akan di-deploy sebagai REST API menggunakan TensorFlow Serving dan menggunakan layanan railway. Ini memungkinkan aplikasi lain untuk mengirimkan data pasien dan menerima prediksi risiko hipertensi secara real-time. |
 | Web app | [hypertension-model](https://mlops-2-production-500e.up.railway.app/v1/models/hypertension-model/metadata)|
 | Monitoring | Deksripsi terkait hasil monitoring dari model serving |
