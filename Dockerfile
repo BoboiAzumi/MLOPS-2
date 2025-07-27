@@ -6,7 +6,7 @@ COPY ./config ./model_config
 
 ENV MODEL_NAME=hypertension-model
 ENV PORT=8501
-ENV MONITORING_CONFIG="./model_config/prometheus.config"
+ENV MONITORING_CONFIG="/app/model_config/prometheus.config"
 
 RUN echo '#!/bin/bash \n\n\
 env \n\
