@@ -10,8 +10,8 @@ PIPELINE_NAME = "naufal_azmi_ginting-pipeline"
 
 # pipeline inputs
 DATA_ROOT = "data"
-TRANSFORM_MODULE_FILE = "modules/credit_card_transform.py"
-TRAINER_MODULE_FILE = "modules/credit_card_trainer.py"
+TRANSFORM_MODULE_FILE = "modules/hypertension_transform.py"
+TRAINER_MODULE_FILE = "modules/hypertension_trainer.py"
 # requirement_file = os.path.join(root, "requirements.txt")
 
 # pipeline outputs

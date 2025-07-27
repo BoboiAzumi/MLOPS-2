@@ -1,111 +1,5 @@
 feature {
-  name: "amount"
-  type: FLOAT
-  presence {
-    min_fraction: 1.0
-    min_count: 1
-  }
-  shape {
-    dim {
-      size: 1
-    }
-  }
-}
-feature {
-  name: "isFraud"
-  type: INT
-  bool_domain {
-  }
-  presence {
-    min_fraction: 1.0
-    min_count: 1
-  }
-  shape {
-    dim {
-      size: 1
-    }
-  }
-}
-feature {
-  name: "nameDest"
-  type: BYTES
-  presence {
-    min_fraction: 1.0
-    min_count: 1
-  }
-  shape {
-    dim {
-      size: 1
-    }
-  }
-}
-feature {
-  name: "nameOrig"
-  type: BYTES
-  presence {
-    min_fraction: 1.0
-    min_count: 1
-  }
-  shape {
-    dim {
-      size: 1
-    }
-  }
-}
-feature {
-  name: "newbalanceDest"
-  type: FLOAT
-  presence {
-    min_fraction: 1.0
-    min_count: 1
-  }
-  shape {
-    dim {
-      size: 1
-    }
-  }
-}
-feature {
-  name: "newbalanceOrig"
-  type: FLOAT
-  presence {
-    min_fraction: 1.0
-    min_count: 1
-  }
-  shape {
-    dim {
-      size: 1
-    }
-  }
-}
-feature {
-  name: "oldbalanceDest"
-  type: FLOAT
-  presence {
-    min_fraction: 1.0
-    min_count: 1
-  }
-  shape {
-    dim {
-      size: 1
-    }
-  }
-}
-feature {
-  name: "oldbalanceOrg"
-  type: FLOAT
-  presence {
-    min_fraction: 1.0
-    min_count: 1
-  }
-  shape {
-    dim {
-      size: 1
-    }
-  }
-}
-feature {
-  name: "step"
+  name: "Age"
   type: INT
   presence {
     min_fraction: 1.0
@@ -118,9 +12,131 @@ feature {
   }
 }
 feature {
-  name: "type"
+  name: "BMI"
+  type: FLOAT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "BP_History"
   type: BYTES
-  domain: "type"
+  domain: "BP_History"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "Exercise_Level"
+  type: BYTES
+  domain: "Exercise_Level"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "Family_History"
+  type: BYTES
+  domain: "Family_History"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "Has_Hypertension"
+  type: BYTES
+  domain: "Has_Hypertension"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "Medication"
+  type: BYTES
+  domain: "Medication"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "Salt_Intake"
+  type: FLOAT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "Sleep_Duration"
+  type: FLOAT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "Smoking_Status"
+  type: BYTES
+  domain: "Smoking_Status"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "Stress_Score"
+  type: INT
   presence {
     min_fraction: 1.0
     min_count: 1
@@ -132,10 +148,37 @@ feature {
   }
 }
 string_domain {
-  name: "type"
-  value: "CASH_IN"
-  value: "CASH_OUT"
-  value: "DEBIT"
-  value: "PAYMENT"
-  value: "TRANSFER"
+  name: "BP_History"
+  value: "Hypertension"
+  value: "Normal"
+  value: "Prehypertension"
+}
+string_domain {
+  name: "Exercise_Level"
+  value: "High"
+  value: "Low"
+  value: "Moderate"
+}
+string_domain {
+  name: "Family_History"
+  value: "No"
+  value: "Yes"
+}
+string_domain {
+  name: "Has_Hypertension"
+  value: "No"
+  value: "Yes"
+}
+string_domain {
+  name: "Medication"
+  value: "ACE Inhibitor"
+  value: "Beta Blocker"
+  value: "Diuretic"
+  value: "None"
+  value: "Other"
+}
+string_domain {
+  name: "Smoking_Status"
+  value: "Non-Smoker"
+  value: "Smoker"
 }

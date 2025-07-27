@@ -84,8 +84,14 @@ def init_components(
     ).with_id('Latest_blessed_model_resolver')
 
     eval_config = tfma.EvalConfig(
-        model_specs=[tfma.ModelSpec(label_key='isFraud_xf')],
-        slicing_specs=[tfma.SlicingSpec()],
+        model_specs=[
+            tfma.ModelSpec(
+                label_key='Has_Hypertension_xf',
+            )
+        ],
+        slicing_specs=[
+            tfma.SlicingSpec(),
+        ],
         metrics_specs=[
             tfma.MetricsSpec(metrics=[
                 tfma.MetricConfig(class_name='ExampleCount'),
