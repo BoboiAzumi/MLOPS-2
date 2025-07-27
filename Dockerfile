@@ -1,7 +1,7 @@
 FROM tensorflow/serving:latest
 
 WORKDIR /app
-COPY ./output/serving_model models/hypertension-model
+COPY ./output/serving_model ./models/hypertension-model
 
 ENV MODEL_NAME=hypertension-model
 ENV PORT=8501
