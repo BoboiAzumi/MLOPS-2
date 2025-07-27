@@ -14,4 +14,8 @@ Username dicoding: naufal_azmi_ginting
 | Performa model | - **AUC** : 0.943<br>- **ExampleCount** : 391<br>- **Binary Accuracy** : 0.887<br>- **False Positive** : 20<br>- **False Negative** : 24<br>- **True Positive** : 173<br>- **True Negative** : 174<br>- **Loss** : 0.937  |
 | Opsi deployment | Model akan di-deploy sebagai REST API menggunakan TensorFlow Serving dan menggunakan layanan railway. Ini memungkinkan aplikasi lain untuk mengirimkan data pasien dan menerima prediksi risiko hipertensi secara real-time. |
 | Web app | [hypertension-model](https://mlops-2-production-500e.up.railway.app/v1/models/hypertension-model/metadata)|
-| Monitoring | Deksripsi terkait hasil monitoring dari model serving |
+| Monitoring | Model telah dideploy menggunakan TensorFlow Serving REST API yang berjalan di Railway. Untuk memastikan ketersediaan dan performa layanan model, monitoring dilakukan menggunakan Prometheus. Endpoint metrik Prometheus diaktifkan melalui konfigurasi monitoring_config_file dan dapat diakses publik melalui jalur /monitoring/prometheus/metrics. Setelah model menerima request prediksi pertama, metrik seperti `:tensorflow:serving:request_count` berhasil terekam. Hal ini menandakan integrasi Prometheus berhasil dan memberikan visibilitas atas penggunaan serta performa real-time dari model. Langkah ini memungkinkan pengembang atau tim DevOps untuk mengawasi kesehatan sistem model serving, mendeteksi anomali performa, serta menjadi dasar untuk alerting atau visualisasi di Grafana. |
+
+Hasil Monitoring
+![alt text](image.png)
+![alt text](image-1.png)
