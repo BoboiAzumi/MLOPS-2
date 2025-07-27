@@ -13,5 +13,5 @@ Username dicoding: naufal_azmi_ginting
 | Metrik evaluasi | - AUC<br>- ExampleCount<br>- Binary Accuracy<br>- False Positive<br>- False Negative<br>- True Positive<br>- True Negative<br>- Loss |
 | Performa model | - **AUC** : 0.93<br>- **ExampleCount** : 391<br>- **Binary Accuracy** : 0.885<br>- **False Positive** : 21<br>- **False Negative** : 24<br>- **True Positive** : 173<br>- **True Negative** : 173<br>- **Loss** : 1.176  |
 | Opsi deployment | Model akan di-deploy sebagai REST API menggunakan TensorFlow Serving dan menggunakan layanan railway. Ini memungkinkan aplikasi lain untuk mengirimkan data pasien dan menerima prediksi risiko hipertensi secara real-time. |
-| Web app | Tautan web app yang digunakan untuk mengakses model serving. Contoh: [nama-model](https://model-resiko-kredit.herokuapp.com/v1/models/model-resiko-kredit/metadata)|
+| Web app | [hypertension-model](https://mlops-2-production-500e.up.railway.app/v1/models/hypertension-model/metadata)|
 | Monitoring | Deksripsi terkait hasil monitoring dari model serving |
